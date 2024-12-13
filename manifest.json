@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Hoarder App Auto Bookmarks",
+    "version": "1.0",
+    "description": "Automatically send added bookmarks to Hoarder App",
+    "homepage_url": "https://github.com/akarca/Hoarder-App-Firefox-Extension",
+    "icons": {
+        "48": "icons/logo48.png",
+        "96": "icons/logo96.png"
+    },
+    "permissions": [
+        "bookmarks",
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": "icons/logo48.png",
+        "default_title": "Hoarder App Auto Bookmarks"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "options_ui": {
+        "page": "options.html",
+        "browser_style": true
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "hoarderextension@nameocean.net",
+            "strict_min_version": "115.0"
+        }
+    }
+}

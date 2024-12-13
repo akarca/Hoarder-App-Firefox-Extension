@@ -1,2 +1,4 @@
-# Hoarder-App-Firefox-Extension
-Firefox extension get bookmark events(create/delete) to hoarder.app
+# Firefox-Bookmark-Webhook
+Receive firefox bookmark created/updated/deleted events to a webhook
+
+Set any webhook url from extension options, then it just works.
