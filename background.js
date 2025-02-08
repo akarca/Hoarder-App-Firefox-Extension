@@ -11,20 +11,23 @@ function handleCreated(id, bookmarkInfo) {
             }
 
             fetch(serverUrl + apiUrl, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer " + result.hoarderCredentials.apiKey
-                },
-                body: JSON.stringify({
-                    "0": {
-                        "json": {
-                            "type": "link",
-                            "url": bookmarkInfo["url"]
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer " + result.hoarderCredentials.apiKey
+                    },
+                    body: JSON.stringify({
+                        "0": {
+                            "json": {
+                                "type": "link",
+                                "url": bookmarkInfo["url"]
+                            }
                         }
-                    }
+                    })
                 })
-            });
+                .catch(error => {
+                    console.error("Error adding bookmark to hoarder:", error);
+                });
         }
     });
 }

@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Hoarder App Auto Bookmarks",
     "version": "1.0",
     "description": "Automatically send added bookmarks to Hoarder App",
@@ -12,6 +12,7 @@
         "bookmarks",
         "storage"
     ],
+    "host_permissions": ["https://*/api/trpc/bookmarks.createBookmark?batch=1"],
     "browser_action": {
         "default_icon": "icons/logo48.png",
         "default_title": "Hoarder App Auto Bookmarks"
